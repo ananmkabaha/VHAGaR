@@ -21,6 +21,8 @@ In this repository, we provide an implementation for the paper "Verification of 
 </div>
 
 <strong>VHAGaR parameters:</strong><br />
+<div style="background-color: #f2f2f2; padding: 1px;">
+  <pre style="font-family: 'Courier New', monospace; font-size: 14px;">
 --dataset: the dataset, can be either mnist, fmnist, cifar10<br />
 --model_name: the model name, can be either FC0, FC1, CNN0, CNN1, or CNN2<br />
 --model_path: the path of the model<br />
@@ -30,6 +32,12 @@ In this repository, we provide an implementation for the paper "Verification of 
 --ct: the target classes<br />
 --timeout: the MIP timeout<br />
 --output_dir: the output directoy<br />
-
+</pre>
+</div>
 <strong>Examples:</strong><br />
-julia run.jl --dataset mnist --model_name CNN1 -m ./models/mnist_CNN1/model.p --perturbation occ --perturbation_size 1,1,5 --output_dir ./results/ --ctag 1 --ct 2,3,4,5,6,7,8,9,10 --timeout 10800<br />
+<div style="background-color: #f2f2f2; padding: 1px;">
+  <pre style="font-family: 'Courier New', monospace; font-size: 14px;">
+    julia run.jl --dataset mnist --model_name FC0 -m ./models/mnist_FC0/model.p --perturbation patch --perturbation_size 1,14,14,5 --output_dir ./results/ --ctag 1 --ct 2,3,4,5,6,7,8,9,10 --timeout 10800<br />
+    julia run.jl --dataset mnist --model_name CNN1 -m ./models/mnist_CNN1/model.p --perturbation occ --perturbation_size 1,1,5 --output_dir ./results/ --ctag 1 --ct 2,3,4,5,6,7,8,9,10 --timeout 10800<br />
+</pre>
+</div>
