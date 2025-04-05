@@ -114,7 +114,11 @@ function main()
     is_debug = args["is_debug"]
     is_reuse_bounds_and_deps = args["is_reuse_bounds_and_deps"]
     timeout = args["timeout"]
-
+    
+    if !isdir(results_path)
+        mkpath(results_path)
+    end
+    
     w, h, k, c = get_dataset_params( dataset )
     nn = get_nn(model_path, model_name, w, h, k, c, dataset)
     token_signature = string(now().instant.periods.value)
