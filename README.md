@@ -31,7 +31,7 @@ In this repository, we provide an implementation for the paper "Verification of 
 --ctag: the source class<br />
 --ct: the target classes<br />
 --timeout: the MIP timeout<br />
---output_dir: the output directoy<br />
+--output_dir: the output directory<br />
 </pre>
 </div>
 <strong>Examples:</strong><br />
